@@ -12,6 +12,9 @@
         <button>Вернуться на главную</button>
     </a>
     <a href="#generation">Поколения ЭВМ</a>
+    <a href="#quotes">Цитаты</a>
+    <a href="#media">Медиа</a>
+    <a href="#forms">Формы</a>
 
     <hr>
 
@@ -26,6 +29,94 @@
     <div>
         <img src="./img/computer_generation_2.jpg" alt="Старая вычислительная машина" width="400" loading="lazy">
     </div>
+
+    <hr id="quotes">
+
+    <h2>Цитаты в HTML</h2>
+    <p>HTML предоставляет специальные теги для оформления цитат:</p>
+    <ul>
+        <li><code>&lt;blockquote&gt;</code> — используется для <strong>длинных цитат</strong>, оформляется как отдельный блок;</li>
+        <li><code>&lt;cite&gt;</code> — указывает источник <strong>цитаты</strong> (книга, автор, сайт);</li>
+        <li>атрибут <code>cite</code> — содержит <strong>ссылку на источник</strong>, но визуально не отображается.</li>
+    </ul>
+
+    <h3>Пример оформления цитаты с источником:</h3>
+    <blockquote cite="https://ru.wikipedia.org/wiki/ЭВМ">
+        «Электронная вычислительная машина – комплекс технических средств, предназначенных для автоматической обработки информации.»
+    </blockquote>
+    <cite>Источник: Википедия</cite>
+
+    <h3>Пример цитаты внутри текста</h3>
+    <p>
+        По словам учёных:
+        <q>развитие вычислительной техники изменило ход истории</q>.
+    </p>
+
+    <hr id="media">
+
+    <h2>Медиаконтент в HTML</h2>
+    <p>HTML позволяет встраивать мультимедиа без сторонних плагинов:</p>
+    <ul>
+        <li><code>&lt;video&gt;</code> — добавление видео;</li>
+        <li><code>&lt;audio&gt;</code> — добавление аудио;</li>
+        <li><code>&lt;iframe&gt;</code> — встраивание внешнего контента (YouTube, карты и т.д.);</li>
+        <li><code>&lt;source&gt;</code> — указывает источники медиафайлов.</li>
+    </ul>
+
+    <h3>Пример видео:</h3>
+    <video controls width="400">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+    </video>
+
+    <h3>Пример аудио:</h3>
+    <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <h3>Пример iframe (YouTube):</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="История ЭВМ" allowfullscreen>
+    </iframe>
+
+    <p><em>Также в качестве примера можно поставить <strong>iframe</strong> из <strong>яндекс.карт</strong>:</em></p>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9537f165a9e3e9fc3b79bd1cc2d13b059c2e8d033c434a40409f624bb553265c&amp;source=constructor" width="560" height="400" frameborder="0">
+    </iframe>
+
+    <hr id="forms">
+
+    <h2>Формы в HTML</h2>
+    <p>Тег <code>&lt;input&gt;</code> используется для ввода данных пользователем.<br> Атрибут <code>type</code> определяет тип вводимой информации.</p>
+
+    <h3>Пример формы с различными типами полей:</h3>
+    <form>
+        <label>
+            Телефон:
+            <input type="tel" placeholder="+7 (___) __-__-__" />
+        </label>
+        <br /><br />
+        <label>
+            Email:
+            <input type="email" placeholder="example@mail.com" />
+        </label>
+        <br /><br />
+        <label>
+            Пароль:
+            <input type="password" />
+        </label>
+        <br /><br />
+        <label>
+            Сайт:
+            <input type="url" placeholder="https://example.com" />
+        </label>
+        <br /><br />
+        <label>
+            Поиск:
+            <input type="search" placeholder="Поиск..." />
+        </label>
+        <br /><br />
+        <input type="submit" value="Отправить" />
+    </form>
 
 </body>
 
